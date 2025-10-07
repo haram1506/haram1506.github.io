@@ -15,6 +15,14 @@
   margin-top: 30px; 
 }
 
+/* 2. Media Query for tablets and smaller desktops */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+}
+
+
 .profile-container:hover {
   background-color: #0f131f;
   border-color: #bababa; 

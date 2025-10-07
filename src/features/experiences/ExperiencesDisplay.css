@@ -17,7 +17,10 @@
 
 .list-and-line {
     position: relative;
-    padding-left: 30px; 
+    padding-left: 30px;
+    width: 100%
+
+    center;
 }
 
 .list-and-line::before {
@@ -35,3 +38,11 @@
 .list-and-line:hover::before {
     opacity: 1.0;
 }
+
+.experiences-list {
+  display: grid;
+  /* This creates a single column that can shrink to zero but expand to fill
+     available space. It's a robust way to prevent overflow conflicts. */
+  grid-template-columns: minmax(0, 1fr);
+}
+

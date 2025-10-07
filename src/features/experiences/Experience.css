@@ -1,10 +1,19 @@
 /* Experience.css */
 .experience-item {
-  display: flex;
-  align-items: flex-start; /* Aligns items to the top */
-  padding-bottom: 30px; 
+  /* 1. This single element is now both the layout container AND the scroll container. */
+  display: grid;
+  overflow-x: auto; /* Corrected from 'show' to 'auto' */
+  
+  /* 2. This is the key: We define the grid columns to have a minimum width.
+     The total minimum width of the content is 190px (date) + 410px (description) = 600px.
+     On a screen smaller than 600px, the content inside this element will be wider
+     than the element itself, which forces the `overflow-x: auto` to activate. */
+  grid-template-columns: 190px minmax(410px, 1fr);
 
-  /* Default state: slightly transparent */
+  /* 3. Standard styling */
+  align-items: start;
+  gap: 30px;
+  padding-bottom: 30px; /* Provides space for the scrollbar */
   opacity: 0.75;
   transition: opacity 0.2s ease;
 }
@@ -16,16 +25,13 @@
 
 .experience-date {
   /* Constant sizing for the date */
-  width: 190px;
-  flex-shrink: 0; /* Prevents the date from shrinking on small screens */
-  
+  width: 190px;  
   color: #dcdcdc; /* A slightly dimmer color for the date */
   font-weight: 600;
   font-size: 22px; 
 }
 
 .experience-description {
-  flex-grow: 1; /* Takes up the remaining space */
   color: #ffffff;
   line-height: 1.6;
 }

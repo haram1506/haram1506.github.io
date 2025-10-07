@@ -46,11 +46,6 @@ html, body {
 }
 
 body {
-  /* For Firefox */
-  scrollbar-width: none;
-  /* For Internet Explorer and Edge */
-  -ms-overflow-style: none;
-
   margin: 0;
   display: flex;
   place-items: center;
@@ -58,12 +53,6 @@ body {
   color: #e0e0e0;
 
   font-family: 'm5x7', sans-serif;
-  overflow-x: hidden;
-}
-
-/* For Chrome, Safari, and Opera */
-body::-webkit-scrollbar {
-  display: none;
 }
 
 h1 {
