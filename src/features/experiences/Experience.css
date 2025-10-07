@@ -1,0 +1,50 @@
+/* Experience.css */
+.experience-item {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  padding-bottom: 30px; 
+
+  /* Default state: slightly transparent */
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.experience-item:hover {
+  /* On hover: fully visible */
+  opacity: 1;
+}
+
+.experience-date {
+  /* Constant sizing for the date */
+  width: 190px;
+  flex-shrink: 0; /* Prevents the date from shrinking on small screens */
+  
+  color: #dcdcdc; /* A slightly dimmer color for the date */
+  font-weight: 600;
+  font-size: 22px; 
+}
+
+.experience-description {
+  flex-grow: 1; /* Takes up the remaining space */
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.experience-role {
+  display: block; /* Makes the strong tag take up its own line */
+  margin-bottom: 4px; /* Space between the role and the details */
+  margin-top: 0px; 
+  font-size: 22px; 
+}
+
+.experience-details {
+  margin: 0; /* Remove default paragraph margin */
+  
+  /* This sets a max-width based on character count. 
+    `65ch` is roughly 65 characters wide, which is ideal for readability. 
+    The width is proportional to the font size and ensures text wraps nicely.
+  */
+  max-width: 125ch;
+  font-size: 20px; 
+  line-height: 1.5;
+}

@@ -1,0 +1,111 @@
+.project-link {
+    text-decoration: none; 
+    display: block;
+}
+
+.project-card {
+    height: 100%; 
+    padding: 20px; 
+    background-color: #0a0d15;
+    border: 1px solid transparent; 
+    border-radius: 0px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+}
+
+.project-card:hover {
+    background-color: #0f131f;
+    border-color: #bababa; 
+    transform: scale(1.02);
+}
+
+.project-name {
+    text-align: center; 
+    margin-top: 0; 
+    color: #ffffff; 
+}
+
+.project-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+.project-description {
+    color: #dcdcdc; 
+    margin: 0; 
+    margin-bottom: 10px;
+}
+
+@media (min-width: 700px) {
+  .project-content {
+    flex-direction: row; 
+  }
+
+  .project-image {
+    width: 320px;
+    flex-shrink: 0;
+  }
+}
+
+.inline-link {
+  color: #a7d8ff; 
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.inline-link:hover {
+  color: #ffffff; 
+}
+
+.project-tag-and-desc-container {
+    display: flex; 
+    flex-direction: column; 
+    align-self: stretch;
+}
+
+.project-tags-container {
+    margin-top: auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+}
+
+.project-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 1.0em;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.9;
+  transition: opacity 0.3 ease;
+}
+
+.project-card:hover .project-tag {
+  opacity: 1.0; 
+}
+
+.tag-icon {
+  font-size: 1.1em;
+}
+
+.tag-dev {
+  background-color: #3b5fa6; /* Blue */
+}
+
+.tag-design {
+  background-color: #b44d93; /* Purple */
+}
+
+.tag-art {
+  background-color: #c54850; /* Red */
+}

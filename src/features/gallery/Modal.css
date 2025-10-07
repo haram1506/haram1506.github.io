@@ -1,0 +1,82 @@
+/* Modal.css */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  gap: 20px;
+
+  width: auto;
+  max-width: 85vw;
+  max-height: 85vh;
+
+  padding: 23px;
+  background-color: #0a0d1599;
+  cursor: default;
+}
+
+.modal-image {
+  max-width: 50vw; 
+  max-height: 80vh;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0; 
+}
+
+.modal-details {
+  flex-grow: 1;
+}
+
+.modal-title {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.modal-description {
+  color: #e0e0e0;
+  line-height: 1.1;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  cursor: pointer;
+
+  opacity: 0.65; 
+  transition: opacity 0.3s ease;
+}
+
+.modal-close-button:hover {
+  opacity: 1.0;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    /* Stack image and details vertically */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-image {
+    /* Adjust bounding box for vertical layout */
+    max-width: 85vw;
+    max-height: 60vh;
+  }
+}

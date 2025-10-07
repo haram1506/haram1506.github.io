@@ -1,0 +1,27 @@
+
+.projects-display-container {
+  padding-left: 30px; 
+  padding-right: 30px; 
+  padding-bottom: 60px;
+  padding-top: 40px;  
+}
+
+.projects-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.projects-grid {
+  display: grid;
+  /* This is the key for the responsive grid:
+    - auto-fit: Create as many columns as can fit.
+    - minmax(350px, 1fr): Each column must be at least 350px wide, 
+      but can grow to share the space (1fr).
+    This automatically handles wrapping and resizing.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  column-gap: 20px; /* This is the space between the project cards */
+  row-gap: 65px; 
+}

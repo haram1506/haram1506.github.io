@@ -1,0 +1,19 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.hero-container,
+.main-content {
+  scroll-snap-align: start;
+}
+
+/* --- FIX FOR INTERNAL SCROLLING --- */
+.main-content {
+  /* 1. Make this section fill the full viewport height */
+  height: 100vh;
+  
+  /* 2. CRUCIAL: Allow this section to scroll its own content if it overflows */
+  overflow-y: auto;
+}
+

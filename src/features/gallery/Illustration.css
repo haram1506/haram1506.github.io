@@ -1,0 +1,16 @@
+/* Illustration.css */
+.illustration-item {
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.illustration-item:hover {
+  transform: scale(1.03);
+}
+
+.illustration-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

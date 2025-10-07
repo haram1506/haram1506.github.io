@@ -1,0 +1,37 @@
+/* ExperiencesSection.css */
+.experiences-display {
+  margin-top: 50px;
+  padding-left: 30px; 
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.experiences-title {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.list-and-line {
+    position: relative;
+    padding-left: 30px; 
+}
+
+.list-and-line::before {
+    content: '';
+    position: absolute; 
+    left: 0; 
+    top: 5px; 
+    bottom: 20px; 
+    width: 2px; 
+    background-color: #ffffff;
+    opacity: 0.75; 
+    transition: opacity 0.2s ease; 
+}
+
+.list-and-line:hover::before {
+    opacity: 1.0;
+}
