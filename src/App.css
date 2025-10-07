@@ -11,7 +11,7 @@ html {
 /* --- FIX FOR INTERNAL SCROLLING --- */
 .main-content {
   /* 1. Make this section fill the full viewport height */
-  height: 100vh;
+  height: 100dvh;
   
   /* 2. CRUCIAL: Allow this section to scroll its own content if it overflows */
   overflow-y: auto;

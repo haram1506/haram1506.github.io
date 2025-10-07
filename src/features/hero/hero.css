@@ -1,5 +1,5 @@
 .hero-container {
-  height: 100vh; /* Full viewport height */
+  height: 100dvh; /* Full viewport height */
   width: 100%;
   position: relative;
   display: grid; /* Easiest way to center content */
