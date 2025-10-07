@@ -8,12 +8,19 @@ html {
   scroll-snap-align: start;
 }
 
-/* --- FIX FOR INTERNAL SCROLLING --- */
 .main-content {
-  /* 1. Make this section fill the full viewport height */
   height: 100dvh;
-  
-  /* 2. CRUCIAL: Allow this section to scroll its own content if it overflows */
   overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+
+  .main-content {
+    height: auto; /* Allow the content to determine its own height */
+    overflow-y: visible; /* Disable the internal scrollbar */
+  }
 }
 

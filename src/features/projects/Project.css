@@ -43,7 +43,7 @@
     margin-bottom: 10px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1450px) {
   .project-content {
     flex-direction: row; 
   }

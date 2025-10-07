@@ -18,8 +18,8 @@
   gap: 20px;
 
   width: auto;
-  max-width: 85vw;
-  max-height: 85vh;
+  max-width: 85dvw;
+  max-height: 85dvh;
 
   padding: 23px;
   background-color: #0a0d1599;
@@ -27,8 +27,8 @@
 }
 
 .modal-image {
-  max-width: 50vw; 
-  max-height: 80vh;
+  max-width: 50dvw; 
+  max-height: 80dvh;
   height: auto;
   width: auto;
   object-fit: contain;
@@ -76,7 +76,7 @@
 
   .modal-image {
     /* Adjust bounding box for vertical layout */
-    max-width: 85vw;
-    max-height: 60vh;
+    max-width: 85dvw;
+    max-height: 60dvh;
   }
 }
