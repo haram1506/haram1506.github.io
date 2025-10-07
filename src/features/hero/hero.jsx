@@ -26,7 +26,7 @@ const Hero = () => {
         <h1>Haram Bae</h1>
         <h2>Developer - Designer - Artist</h2>
         <div className="social-links">
-          <a href="mailto:harambae1506@email.com" title="Email">
+          <a href="mailto:harambae1506@gmail.com" title="Email">
             <img src={gmailIcon} alt="GitHub" className="social-icon" />
           </a>
           <a href="https://github.com/KotgeDev" target="_blank" rel="noopener noreferrer" title="GitHub">
