@@ -54,3 +54,9 @@
   font-size: 20px; 
   line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+  .experience-details {
+    max-width: 60%;
+  }
+}
