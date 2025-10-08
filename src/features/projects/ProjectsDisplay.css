@@ -18,7 +18,7 @@
   grid-template-columns: 1fr; /* This creates exactly one column */
   
   column-gap: 20px;
-  row-gap: 65px; 
+  row-gap: 20px; 
 }
 /* 2. Media Query for tablets and smaller desktops */
 @media (min-width: 768px) {
