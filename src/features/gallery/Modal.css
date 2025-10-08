@@ -23,6 +23,7 @@
 
   padding: 23px;
   background-color: #0a0d1599;
+  backdrop-filter: blur(10px); 
   cursor: default;
 }
 

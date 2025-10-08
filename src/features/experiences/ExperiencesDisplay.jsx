@@ -19,7 +19,7 @@ const experienceData = [
 const ExperiencesDisplay = () => {
   return (
     // This section has a relative position to anchor the vertical line
-    <div className="experiences-display">
+    <div className="experiences-display" id="experiences">
       <h1 className="experiences-title">Experiences</h1>
       <div className="list-and-line">
         <div className="experiences-list">

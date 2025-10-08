@@ -3,7 +3,7 @@
   padding-left: 30px; 
   padding-right: 30px; 
   padding-bottom: 60px;
-  padding-top: 40px;  
+  padding-top: 50px;  
 }
 
 .projects-title {
@@ -33,3 +33,22 @@
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
 }
+
+.expand-button {
+  display: block; /* Allows margin auto to work */
+  margin: 30px auto 0; /* Adds space above and centers it */
+  background: none;
+  border: none;
+  color: #9f9f9f;
+  font-family: inherit; /* Use the same font as the rest of the site */
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  
+  padding-bottom: 0;
+}
+
+.expand-button:hover {
+  color: #ffffff;
+}
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProjectsDisplay.css';
 import Project from './Project.jsx'
 
@@ -6,6 +6,7 @@ import project1Img from '../../assets/projects/Project1.png';
 import project2Img from '../../assets/projects/Project2.png'; 
 import project3Img from '../../assets/projects/Project3.gif';
 import project4Img from '../../assets/projects/Project4.png';
+import project5Img from '../../assets/projects/Project5.png';
 
 // Define your project data in an array for easy management
 const projectData = [
@@ -63,14 +64,24 @@ const projectData = [
     link: 'https://cjmaxik.itch.io/lost-her-mind',
     tags: ['Dev'],
   },
+  {
+    name: 'Pilot: Quest for the Artifact',
+    imageSrc: project5Img,
+    description: 'A spacecraft simulation roguelike with an emphasis on realistic physics. One of my ongoing indie game development projects.',
+    link: '',
+    tags: ['Dev', 'Design', 'Art'],
+  },
 ];
 
 const ProjectsDisplay = () => {
+  const [isExpanded, setIsExpanded] = useState(false); 
+  const projectsToShow = isExpanded ? projectData : projectData.slice(0, 4); 
+
   return (
-    <section className="projects-display-container">
+    <section className="projects-display-container" id="projects">
       <h1 className="projects-title"> Projects </h1>
       <div className="projects-grid">
-        {projectData.map((project) => (
+        {projectsToShow.map((project) => (
           <Project
             key={project.name}
             name={project.name}
@@ -81,6 +92,28 @@ const ProjectsDisplay = () => {
           />
         ))}
       </div>
+
+      {
+        projectData.length > 4 && !isExpanded && (
+          <button
+            className="expand-button"
+            onClick={() => setIsExpanded(true)}
+          >
+            {'< Show More >'} 
+          </button>
+        )
+      }
+
+      {
+        isExpanded && (
+          <button 
+            className="expand-button" 
+            onClick={() => setIsExpanded(false)}
+          >
+            {'> Show Less <'}
+          </button>
+        )
+      }      
     </section>
   );
 };

@@ -10,17 +10,19 @@ const description = [
 
 export default function Profile() {
     return (
-        <div className="profile-container">
-            <img
-                src={profileImage}
-                alt="Profile Picture"
-                className="profile-picture"
-            />
-            <div className="profile-description">
-                <h3>Haram Bae</h3>
-                {description.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                ))}
+        <div className="profile-margin" id="profile">
+            <div className="profile-container">
+                <img
+                    src={profileImage}
+                    alt="Profile Picture"
+                    className="profile-picture"
+                />
+                <div className="profile-description">
+                    <h3>Haram Bae</h3>
+                    {description.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                    ))}
+                </div>
             </div>
         </div>
     );

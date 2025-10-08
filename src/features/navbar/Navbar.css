@@ -1,0 +1,44 @@
+.navbar {
+  position: fixed; /* Keeps the navbar at the top, even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a0d1599; /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Adds a modern blur effect */
+  padding: 10px 40px;
+  box-sizing: border-box;
+  z-index: 1100; /* Must be higher than the sticky profile's z-index (1000) */
+}
+
+.nav-content {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Aligns links to the right */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.nav-links a, .home-link {
+  color: #dcdcdc; /* 9f9f9f */
+  text-decoration: none;
+  font-size: 1.15em;
+  transition: color 0.2s ease;
+}
+
+.home-link {
+    color:#a7d8ff;
+}
+
+
+.nav-links a:hover, .home-link:hover  {
+    color: #ffffff;
+}
+

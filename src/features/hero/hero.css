@@ -21,6 +21,14 @@
   z-index: 1; /* Sits between the video and the content */
 }
 
+.video-context {
+  position: absolute; 
+  bottom: 5dvh; 
+  left: 5dvh; 
+  z-index: 2; 
+  color:rgba(255, 255, 255, 0.6)
+}
+
 .hero-video {
   position: absolute;
   top: 0;

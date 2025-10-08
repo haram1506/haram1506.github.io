@@ -1,3 +1,8 @@
+
+.profile-margin {
+  padding-top: 50px; 
+}
+
 .profile-container {
   display: flex; 
   align-items: center; 
@@ -12,7 +17,6 @@
 
   background-color: #0a0d15;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin-top: 30px; 
 }
 
 /* 2. Media Query for tablets and smaller desktops */

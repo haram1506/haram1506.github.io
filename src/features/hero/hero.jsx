@@ -10,7 +10,7 @@ import itchIcon from '../../assets/itch.png';
 
 const Hero = () => {
   return (
-    <section className="hero-container">
+    <section className="hero-container" id="hero">
       {/* Background video */}
       <video
         className="hero-video"
@@ -37,6 +37,8 @@ const Hero = () => {
           </a>
         </div>
       </div>
+
+      <div className="video-context">{'< Pilot > concept gameplay'}</div>
     </section>
   );
 };
