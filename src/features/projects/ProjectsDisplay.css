@@ -34,6 +34,10 @@
   }
 }
 
+.is-transitioning {
+  pointer-events: none;
+}
+
 .expand-button {
   display: block; /* Allows margin auto to work */
   margin: 30px auto 0; /* Adds space above and centers it */

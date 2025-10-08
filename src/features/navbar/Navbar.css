@@ -26,6 +26,12 @@
   gap: 25px;
 }
 
+@media (max-width: 500px) {
+    .nav-links {
+        gap: 15px;
+    }
+}
+
 .nav-links a, .home-link {
   color: #dcdcdc; /* 9f9f9f */
   text-decoration: none;

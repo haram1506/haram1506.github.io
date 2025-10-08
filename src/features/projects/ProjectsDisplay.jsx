@@ -75,10 +75,27 @@ const projectData = [
 
 const ProjectsDisplay = () => {
   const [isExpanded, setIsExpanded] = useState(false); 
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const projectsToShow = isExpanded ? projectData : projectData.slice(0, 4); 
 
+  const handleToggle = (expandState) => {
+    // Prevent new clicks during the cooldown period
+    if (isTransitioning) return;
+
+    setIsExpanded(expandState);
+    setIsTransitioning(true);
+
+    // After 500ms, turn off the transitioning state to re-enable clicks.
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500);
+  };
+
   return (
-    <section className="projects-display-container" id="projects">
+    <section 
+      className={`projects-section-container ${isTransitioning ? 'is-transitioning' : ''}`} 
+      id="projects"
+    >
       <h1 className="projects-title"> Projects </h1>
       <div className="projects-grid">
         {projectsToShow.map((project) => (
@@ -97,7 +114,7 @@ const ProjectsDisplay = () => {
         projectData.length > 4 && !isExpanded && (
           <button
             className="expand-button"
-            onClick={() => setIsExpanded(true)}
+            onClick={() => handleToggle(true)}
           >
             {'< Show More >'} 
           </button>
@@ -108,7 +125,7 @@ const ProjectsDisplay = () => {
         isExpanded && (
           <button 
             className="expand-button" 
-            onClick={() => setIsExpanded(false)}
+            onClick={() => handleToggle(false)}
           >
             {'> Show Less <'}
           </button>

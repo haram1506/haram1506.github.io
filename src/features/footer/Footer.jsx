@@ -20,7 +20,8 @@ const Footer = () => {
             </a>
         </div>
         <p className="credits">
-            Made with React, Vite, Gemini and my sanity. All fonts used are either public domain or under SIL Open Font License.   
+            Made with React, Vite, Gemini and my Chuseok holiday time.
+            All fonts used are either public domain or under SIL Open Font License.  
         </p>
     </footer>
   );
