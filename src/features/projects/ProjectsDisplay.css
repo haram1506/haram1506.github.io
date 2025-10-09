@@ -34,7 +34,7 @@
   }
 }
 
-.is-transitioning {
+.projects-display-container.is-transitioning {
   pointer-events: none;
 }
 

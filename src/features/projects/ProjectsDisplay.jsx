@@ -68,7 +68,7 @@ const projectData = [
     name: 'Pilot: Quest for the Artifact',
     imageSrc: project5Img,
     description: 'A spacecraft simulation roguelike with an emphasis on realistic physics. One of my ongoing indie game development projects.',
-    link: '',
+    link: 'https://kotgedev.itch.io',
     tags: ['Dev', 'Design', 'Art'],
   },
 ];
