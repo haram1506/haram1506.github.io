@@ -20,8 +20,8 @@ const Footer = () => {
             </a>
         </div>
         <p className="credits">
-            Made with React, Vite, Gemini and my Chuseok holiday time.
-            All fonts used are either public domain or under SIL Open Font License.  
+            © 2025 Haram Bae. All Rights Reserved.
+            Made with React and Vite. Fonts used are licensed for public use. 
         </p>
     </footer>
   );
