@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css'
+import useIntersectionObserver from '../../hooks/useInteractionObserver';
 
 import profileImage from '../../assets/ProfilePicture.jpg'
 
@@ -9,8 +10,16 @@ const description = [
 ];
 
 export default function Profile() {
+    const [profileRef, isProfileVisible] = useIntersectionObserver({
+        threshold: 0.1 // The animation will trigger when 10% of the element is visible
+    });
+
     return (
-        <div className="profile-margin" id="profile">
+        <div 
+            ref={profileRef}
+            className={`profile-margin fade-in-up ${isProfileVisible ? 'is-visible' : ''}`} 
+            id="profile"
+        >
             <div className="profile-container">
                 <img
                     src={profileImage}

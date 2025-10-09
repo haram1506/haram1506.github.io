@@ -1,0 +1,35 @@
+/* --- Reusable Fade-In-Up Animation --- */
+/* This will be used for most sections */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Special Project Card Animation --- */
+/* This defines the "white flash" effect */
+@keyframes card-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* This class will be applied to the project cards */
+.project-card-enter {
+  opacity: 0; /* Start hidden */
+}
+
+.project-card-enter.is-visible {
+  /* When visible, run the animation */
+  animation: card-enter 0.8s forwards;
+}

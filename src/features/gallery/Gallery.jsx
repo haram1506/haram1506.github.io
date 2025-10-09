@@ -3,6 +3,7 @@ import Masonry from 'react-masonry-css';
 import Illustration from './Illustration';
 import Modal from './Modal';
 import './Gallery.css';
+import useIntersectionObserver from '../../hooks/useInteractionObserver';
 
 // Import your images
 import art1 from '../../assets/illustrations/illust1.png';
@@ -41,6 +42,10 @@ const illustrationData = [
 const Gallery = () => {
   const [selectedIllustration, setSelectedIllustration] = useState(null);
 
+  const [galleryRef, isGalleryVisible] = useIntersectionObserver({
+        threshold: 0.1 // The animation will trigger when 10% of the element is visible
+    });
+
   const breakpointColumnsObj = {
     default: 3,
     1100: 2,
@@ -49,7 +54,11 @@ const Gallery = () => {
 
   return (
     <>
-      <section className="gallery-section" id="gallery">
+      <section 
+        ref={galleryRef}
+        className={`gallery-section fade-in-up ${isGalleryVisible ? 'is-visible' : ''}`} 
+        id="gallery"
+      >
         <h1 className="gallery-title">Art Gallery</h1>
         <div className="gallery-container">
           <Masonry

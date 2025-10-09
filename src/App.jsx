@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './animations.css';
 
 import Layout from './components/Layout.jsx';
 import Hero from './features/hero/hero.jsx'

@@ -8,7 +8,7 @@ const tagInfo = {
 };
 
 const Project = ({ name, imageSrc, description, link, tags }) => {
-  const Content = (
+  return (
     <div className="project-card">
       <h2 className="project-name">{name}</h2>
       <div className="project-content">
@@ -29,23 +29,10 @@ const Project = ({ name, imageSrc, description, link, tags }) => {
             )} */}
           </div>   
         </div>
+
+        {link && <a href={link} target="_blank" rel="noopener noreferrer" className="project-card-link"></a>}
       </div>
-  );
-
-  if (link) {
-    return (
-      <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
-        {Content}
-      </a>
-    )
-  }
-
-  return (
-    <div className="project-link">
-      {Content}
-    </div>
   );
 };
 
 export default Project;
-

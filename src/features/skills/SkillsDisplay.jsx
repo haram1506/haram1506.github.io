@@ -1,5 +1,6 @@
 import React from 'react';
 import './SkillsDisplay.css';
+import useIntersectionObserver from '../../hooks/useInteractionObserver';
 
 // Step 1: Import all your skill images from the assets folder
 import skill1Img from '../../assets/skills/Skill1.png';
@@ -22,8 +23,15 @@ const skills = [
 ];
 
 const SkillsDisplay = () => {
+  const [skillRef, isSkillVisible] = useIntersectionObserver({
+          threshold: 0.1 // The animation will trigger when 10% of the element is visible
+      });
+
   return (
-    <section className="skills-section-container">
+    <section 
+      ref={skillRef}
+      className={`skills-section-container fade-in-up ${isSkillVisible ? 'is-visible' : ''}`} 
+    >
       <div className="skills-grid">
         {/* Step 3: Map over the array to render each image */}
         {skills.map((skillSrc, index) => (

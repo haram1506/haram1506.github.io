@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ProjectsDisplay.css';
 import Project from './Project.jsx'
+import useIntersectionObserver from '../../hooks/useInteractionObserver.js';
 
 import project1Img from '../../assets/projects/Project1.png'; 
 import project2Img from '../../assets/projects/Project2.png'; 
@@ -68,45 +69,46 @@ const projectData = [
     name: 'Pilot: Quest for the Artifact',
     imageSrc: project5Img,
     description: 'A spacecraft simulation roguelike with an emphasis on realistic physics. One of my ongoing indie game development projects.',
-    link: 'https://kotgedev.itch.io',
+    link: '',
     tags: ['Dev', 'Design', 'Art'],
   },
 ];
 
 const ProjectsDisplay = () => {
   const [isExpanded, setIsExpanded] = useState(false); 
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const projectsToShow = isExpanded ? projectData : projectData.slice(0, 4); 
 
-  const handleToggle = (expandState) => {
-    // Prevent new clicks during the cooldown period
-    if (isTransitioning) return;
-
-    setIsExpanded(expandState);
-    setIsTransitioning(true);
-
-    // After 500ms, turn off the transitioning state to re-enable clicks.
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 500);
-  };
+  const [sectionRef, isSectionVisible] = useIntersectionObserver({threshold: 0.1});
 
   return (
     <section 
-      className={`projects-section-container ${isTransitioning ? 'is-transitioning' : ''}`} 
+      ref={sectionRef}
+      className="projects-section-container" 
       id="projects"
     >
-      <h1 className="projects-title"> Projects </h1>
+      <h1 
+        className={`projects-title fade-in-up ${isSectionVisible ? 'is-visible' : ''}`}
+      >
+        My Projects
+      </h1>
       <div className="projects-grid">
-        {projectsToShow.map((project) => (
-          <Project
+        {projectsToShow.map((project, index) => (
+          <div
             key={project.name}
-            name={project.name}
-            imageSrc={project.imageSrc}
-            description={project.description}
-            link={project.link}
-            tags={project.tags}
-          />
+            className={`project-card-enter ${isSectionVisible ? 'is-visible' : ''}`}
+            style={
+              {animationDelay : `${(index < 8 ? index % 4 : index - 4) * 150}ms`}
+            }
+          >
+            <Project
+              key={project.name}
+              name={project.name}
+              imageSrc={project.imageSrc}
+              description={project.description}
+              link={project.link}
+              tags={project.tags}
+            />
+          </div>
         ))}
       </div>
 
@@ -114,7 +116,7 @@ const ProjectsDisplay = () => {
         projectData.length > 4 && !isExpanded && (
           <button
             className="expand-button"
-            onClick={() => handleToggle(true)}
+            onClick={() => setIsExpanded(true)}
           >
             {'< Show More >'} 
           </button>
@@ -125,7 +127,7 @@ const ProjectsDisplay = () => {
         isExpanded && (
           <button 
             className="expand-button" 
-            onClick={() => handleToggle(false)}
+            onClick={() => setIsExpanded(false)}
           >
             {'> Show Less <'}
           </button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Experience from './Experience';
 import './ExperiencesDisplay.css';
+import useIntersectionObserver from '../../hooks/useInteractionObserver';
 
 // Define your experience data in an array
 const experienceData = [
@@ -17,9 +18,17 @@ const experienceData = [
 ];
 
 const ExperiencesDisplay = () => {
+  const [expRef, isExpVisible] = useIntersectionObserver({
+        threshold: 0.1 // The animation will trigger when 10% of the element is visible
+    });
+
   return (
     // This section has a relative position to anchor the vertical line
-    <div className="experiences-display" id="experiences">
+    <div 
+      ref={expRef}
+      className={`experiences-display  fade-in-up ${isExpVisible ? 'is-visible' : ''}`}
+      id="experiences"
+    >
       <h1 className="experiences-title">Experiences</h1>
       <div className="list-and-line">
         <div className="experiences-list">
