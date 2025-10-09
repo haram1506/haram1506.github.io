@@ -90,30 +90,17 @@
   align-items: center;
   gap: 6px;
   padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 1.0em;
+  font-size: 1.1em;
   font-weight: 600;
   color: #ffffff;
-  opacity: 0.9;
   transition: opacity 0.3 ease;
-}
 
-.project-card:hover .project-tag {
-  opacity: 1.0; 
+  border-width: 1px; 
+  border-color: #9f9f9f;
+  border-style: solid;
+  border-radius: 4px;
 }
 
 .tag-icon {
   font-size: 1.1em;
-}
-
-.tag-dev {
-  background-color: #3b5fa6; /* Blue */
-}
-
-.tag-design {
-  background-color: #b44d93; /* Purple */
-}
-
-.tag-art {
-  background-color: #c54850; /* Red */
 }

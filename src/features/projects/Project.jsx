@@ -1,11 +1,11 @@
 import React from 'react';
 import './Project.css';
 
-const tagInfo = {
-  Dev: { icon: '💻', className: 'tag-dev' },
-  Design: { icon: '📝', className: 'tag-design' },
-  Art: { icon: '🎨', className: 'tag-art' },
-};
+// const tagInfo = {
+//   Dev: { icon: '💻', className: 'tag-dev' },
+//   Design: { icon: '📝', className: 'tag-design' },
+//   Art: { icon: '🎨', className: 'tag-art' },
+// };
 
 const Project = ({ name, imageSrc, description, link, tags }) => {
   return (
@@ -17,16 +17,16 @@ const Project = ({ name, imageSrc, description, link, tags }) => {
           <div className="project-tag-and-desc-container">
             <p className="project-description">{description}</p>
             
-            {/* {tags && tags.length > 0 && (
+            {tags && tags.length > 0 && (
               <div className="project-tags-container">
                 {tags.map((tag) => (
-                  <div key={tag} className={`project-tag ${tagInfo[tag]?.className || ''}`}>
-                    <span className="tag-icon">{tagInfo[tag]?.icon || ''}</span>
+                  <div key={tag} className="project-tag">
+                    {/* <span className="tag-icon">{tagInfo[tag]?.icon || ''}</span> */}
                     <span>{tag}</span>
                   </div>
                 ))}
               </div>
-            )} */}
+            )}
           </div>   
         </div>
 
