@@ -83,7 +83,7 @@ const ProjectsDisplay = () => {
   return (
     <section 
       ref={sectionRef}
-      className="projects-section-container" 
+      className="projects-display-container" 
       id="projects"
     >
       <h1 
