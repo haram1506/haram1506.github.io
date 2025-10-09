@@ -42,7 +42,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
         <div className="nav-content">
-            <a href="#hero" className="home-link">Home</a>
+            <a href="#hero" className="home-link" id="desktop">Home</a>
+            <a href="#hero" className="home-link" id="mobile">^</a>
             <ul className="nav-links">
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#projects">Projects</a></li>
