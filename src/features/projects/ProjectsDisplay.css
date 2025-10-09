@@ -34,9 +34,9 @@
   }
 }
 
-.projects-display-container.is-transitioning {
+/* .projects-display-container.is-transitioning {
   pointer-events: none;
-}
+} */
 
 .expand-button {
   display: block; /* Allows margin auto to work */
