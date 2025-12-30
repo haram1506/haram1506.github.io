@@ -3,7 +3,7 @@ import './Hero.css';
 
 // Import assets for the hero section
 // Using absolute paths from the project root for better reliability.
-import videoBG from '../../assets/trailer.mp4';
+import videoBG from '../../assets/pilot_trailer.mp4';
 import gmailIcon from '../../assets/gmail.png';
 import githubIcon from '../../assets/github.png';
 import itchIcon from '../../assets/itch.png';
@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="video-context">{'< Pilot: 6174 > trailer snipet'}</div>
+      <div className="video-context">{'< Pilot: 6174 > teaser'}</div>
     </section>
   );
 };

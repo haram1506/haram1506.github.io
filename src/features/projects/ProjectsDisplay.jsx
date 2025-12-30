@@ -7,10 +7,17 @@ import project1Img from '../../assets/projects/Project1.png';
 import project2Img from '../../assets/projects/Project2.png'; 
 import project3Img from '../../assets/projects/Project3.gif';
 import project4Img from '../../assets/projects/Project4.png';
-import project5Img from '../../assets/projects/Project5.png';
+import project5Img from '../../assets/projects/main_capsule.png';
 
 // Define your project data in an array for easy management
 const projectData = [
+  {
+    name: 'Pilot: 6174',
+    imageSrc: project5Img,
+    description: 'A spacecraft simulation roguelike with an emphasis on realistic physics.',
+    link: '',
+    tags: ['Dev', 'Design', 'Art'],
+  },
   {
     name: 'Neuro Adventures',
     imageSrc: project1Img,
@@ -64,14 +71,7 @@ const projectData = [
     ),
     link: 'https://cjmaxik.itch.io/lost-her-mind',
     tags: ['Dev'],
-  },
-  {
-    name: 'Pilot: Quest for the Artifact',
-    imageSrc: project5Img,
-    description: 'A spacecraft simulation roguelike with an emphasis on realistic physics. One of my ongoing indie game development projects.',
-    link: '',
-    tags: ['Dev', 'Design', 'Art'],
-  },
+  }
 ];
 
 const ProjectsDisplay = () => {
